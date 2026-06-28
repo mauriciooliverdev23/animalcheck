@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AnimalCheck | Demonstração do Produto</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand"><span class="brand-mark">AC</span>AnimalCheck</div>
+        <div class="nav-links">
+          <a href="#dashboard">Dashboard</a>
+          <a href="#features">Recursos</a>
+          <a href="#plans">Planos</a>
+          <a href="#run">Rodar localmente</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">SaaS IoT para rastreamento e cuidado animal</p>
+          <h1>Monitore seu animal em tempo real com GPS, alertas inteligentes e histórico completo.</h1>
+          <p class="hero-description">
+            Uma experiência moderna inspirada em mapas, mobilidade e dispositivos conectados para tutores,
+            famílias, veterinários, fazendas e empresas.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#dashboard">Ver demonstração</a>
+            <a class="button secondary" href="#run">Como rodar</a>
+          </div>
+        </div>
+
+        <aside class="device-card" aria-label="Resumo do animal de exemplo">
+          <div class="pet-photo" role="img" aria-label="Cachorro golden retriever de exemplo">🐕</div>
+          <div>
+            <p class="card-label">Animal de exemplo</p>
+            <h2>Thor</h2>
+            <p>Golden Retriever • 4 anos • 31 kg</p>
+          </div>
+          <div class="status-row"><span class="status-dot online"></span> Coleira online • GPS preciso</div>
+          <div class="battery"><span style="width: 78%"></span></div>
+          <p class="small">Bateria da coleira: 78%</p>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section id="dashboard" class="section dashboard-section">
+        <div class="section-heading">
+          <p class="eyebrow">Dashboard ao vivo</p>
+          <h2>Visualização para apresentar o conceito do sistema</h2>
+          <p>
+            A página abaixo simula como o tutor acompanharia o Thor no painel web ou no aplicativo mobile.
+          </p>
+        </div>
+
+        <div class="dashboard">
+          <div class="map-panel">
+            <div class="map-header">
+              <div>
+                <p class="card-label">Mapa em tempo real</p>
+                <h3>Parque Villa-Lobos, São Paulo</h3>
+              </div>
+              <span class="live-pill">● Ao vivo</span>
+            </div>
+            <div class="map-canvas">
+              <div class="safe-zone"></div>
+              <div class="route"></div>
+              <button class="pet-marker" id="petMarker" aria-label="Localização atual do Thor">🐕</button>
+              <span class="map-pin home">🏠</span>
+              <span class="map-pin vet">⚕</span>
+              <span class="map-label safe">Cerca virtual segura</span>
+              <span class="map-label route-label">Rota recente</span>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <article class="metric-card">
+              <span>Última localização</span>
+              <strong>23.5475° S, 46.7311° W</strong>
+              <small>Atualizado há <b id="secondsAgo">3</b>s</small>
+            </article>
+            <article class="metric-card">
+              <span>Velocidade</span>
+              <strong id="speedValue">6,8 km/h</strong>
+              <small>Caminhando</small>
+            </article>
+            <article class="metric-card">
+              <span>Tempo andando</span>
+              <strong>42 min</strong>
+              <small>Hoje</small>
+            </article>
+            <article class="metric-card">
+              <span>Tempo parado</span>
+              <strong>18 min</strong>
+              <small>Hoje</small>
+            </article>
+            <article class="metric-card alert">
+              <span>Status</span>
+              <strong>Seguro</strong>
+              <small>Dentro da cerca virtual</small>
+            </article>
+            <article class="metric-card">
+              <span>Temperatura</span>
+              <strong>32 °C</strong>
+              <small>Dispositivo normal</small>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section features-section">
+        <div class="section-heading">
+          <p class="eyebrow">Recursos comerciais</p>
+          <h2>O que o AnimalCheck entrega</h2>
+        </div>
+        <div class="feature-grid">
+          <article><span>📍</span><h3>Rastreamento em tempo real</h3><p>WebSocket para movimentação com baixa latência no mapa.</p></article>
+          <article><span>🛡️</span><h3>Cerca virtual</h3><p>Círculos, retângulos e polígonos com alerta imediato de saída e retorno.</p></article>
+          <article><span>🔋</span><h3>Alertas inteligentes</h3><p>Baixa bateria, sem sinal, GPS desligado, corrida, parada prolongada e temperatura elevada.</p></article>
+          <article><span>🩺</span><h3>Painel veterinário</h3><p>Atividade, peso, vacinas, consultas e medicamentos em visão profissional.</p></article>
+          <article><span>👨‍👩‍👧</span><h3>Compartilhamento familiar</h3><p>Permissões diferentes para pai, mãe, filhos e cuidadores.</p></article>
+          <article><span>🚨</span><h3>Modo perdido</h3><p>Atualização mais frequente, precisão máxima e notificações constantes.</p></article>
+        </div>
+      </section>
+
+      <section id="plans" class="section plans-section">
+        <div class="section-heading">
+          <p class="eyebrow">Monetização</p>
+          <h2>Planos prontos para evoluir</h2>
+        </div>
+        <div class="plans">
+          <article><h3>Free</h3><p>1 animal, histórico curto e uma cerca virtual.</p></article>
+          <article class="featured"><h3>Premium</h3><p>Mais histórico, mais geofences, relatórios e veterinário.</p></article>
+          <article><h3>Família</h3><p>Compartilhamento com vários responsáveis e múltiplos animais.</p></article>
+          <article><h3>Veterinário/Empresas</h3><p>Painéis profissionais, muitos animais, permissões e SLA.</p></article>
+        </div>
+      </section>
+
+      <section id="run" class="section run-section">
+        <div class="section-heading">
+          <p class="eyebrow">Rodar em sua máquina</p>
+          <h2>Como abrir esta demonstração localmente</h2>
+          <p>Esta página é estática e não precisa instalar dependências.</p>
+        </div>
+        <div class="terminal-card">
+          <pre><code>cd /caminho/para/animalcheck
+python3 -m http.server 8080
+# abra http://localhost:8080/presentation/ no navegador</code></pre>
+        </div>
+        <p class="run-note">
+          Se preferir, também é possível abrir o arquivo <code>presentation/index.html</code> diretamente no navegador.
+          O servidor local é recomendado para simular melhor o comportamento de um site real.
+        </p>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
