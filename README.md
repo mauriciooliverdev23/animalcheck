@@ -15,6 +15,8 @@ Este repositório inicia pela fase de arquitetura e planejamento. A implementaç
 - [Estratégia de segurança e LGPD](docs/security.md)
 - [Plano de infraestrutura em nuvem](docs/cloud-infrastructure.md)
 - [Estimativa de custos operacionais](docs/costs.md)
+- [Como rodar localmente](docs/run-locally.md)
+- [Página de apresentação do produto](presentation/index.html)
 
 ## Stack proposta
 
